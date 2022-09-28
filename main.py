@@ -11,7 +11,7 @@ game=requests.post("https://api.ropro.io/verificationMetadata.php").json()["univ
 
 
 requests.post(f"https://games.roblox.com/v1/games/{game}/favorites", cookies={'.ROBLOSECURITY': str(cookie)}, json={"isFavorited": True})
-r=requests.post("https://api.ropro.io/generateVerificationToken.php", cookies={'.ROBLOSECURITY': str(cookie)}, json={"isFavorited": True}).json()
+r=requests.post("https://api.ropro.io/generateVerificationToken.php", cookies={'.ROBLOSECURITY': str(cookie)}).json()
 print(r)
 
 # work in progress
